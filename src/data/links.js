@@ -8,17 +8,17 @@ export const links =
   {
     "site": "linkedin",
     "url" : "https://www.linkedin.com/in/tatjanaburdett/",
-    "text": "About"
+    "text": "Projects"
   },
-  {
-    "site": "gmail",
-    "url": "mailto:tatiaburdett@gmail.com",
-    "text": "About"
-  },
+  // {
+  //   "site": "gmail",
+  //   "url": "mailto:tatiaburdett@gmail.com",
+  //   "text": "Blog"
+  // },
   {
     "site": "calendly",
     "url" : "https://www.calendly.com/tatiaburdett",
     "text": "Resume",
-    "customStyle": "btn px-2 btn-outline-secondary"
+    "customStyle": "btn px-2 btn-outline-secondary",
   }
 ]

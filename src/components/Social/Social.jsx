@@ -1,7 +1,9 @@
 import React from "react";
 import { socials } from "../../data/socials"
+import { motion, useScroll } from "framer-motion"
 
 export default function Social() {
+	const { scrollYProgress } = useScroll();
 
 	const mapped = socials.map((platform, index) => (
 		<a
@@ -15,5 +17,10 @@ export default function Social() {
 		</a>
 	));
 
-	return <div className="m-3 btn-group-vertical">{mapped}</div>;
+	return (
+		<div className="text-center m-5">
+			<motion.div style={{ scaleX: scrollYProgress }} />
+			<div className="btn-group">{mapped}</div>
+		</div>
+	);
 }
