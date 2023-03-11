@@ -1,19 +1,22 @@
 import React from "react";
 import { links } from "../../data/links";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
 	const mappedLinks = links.map((link, index) => (
 		<li className="nav-item">
-			<a
+			<motion.a
 				key={index}
-        className={`nav-link ${link.customStyle}`}
+        className={`mx-1 nav-link ${link.customStyle}`}
         aria-current="page"
 				href={link.url}
 				target="_blank"
 				rel="noreferrer"
+				whileHover={{ scale: 1.1, opacity: 1 }}
+				whileTap={{ scale: 0.9 }}
 			>
 				<span>{link.text}</span>
-			</a>
+			</motion.a>
 		</li>
 	));
 
